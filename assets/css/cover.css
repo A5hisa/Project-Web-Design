@@ -4,21 +4,51 @@
 .btn-primary:focus {
   color: #333;
   text-shadow: none; /* Prevent inheritance from `body` */
-
 }
-
 
 /*
  * Base structure
  */
 
 body {
-  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
-  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
 .cover-container {
   max-width: 42em;
 }
 
-
+/* Cursor */
+.cursor {
+  position: relative;
+  width: 24em;
+  margin: 0 auto;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  font-size: 35px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  transform: translateY(-20%);
+}
+/* Animation */
+.typewriter-animation {
+  animation: typewriter 2.3s steps(29) 1s 1 normal both,
+    blinkingCursor 500ms steps(50) infinite normal;
+}
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 48%;
+  }
+}
+@keyframes blinkingCursor {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
