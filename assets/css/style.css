@@ -1,0 +1,54 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
+}
+
+/* CUSTOMIZE NARBAR
+-------------------------------------------------- */
+.navbar .nav-link {
+  padding: 0.25rem 1;
+  font-weight: 700;
+  background-color: transparent;
+  border-bottom: 0.25rem solid transparent;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+
+.navbar .nav-item + .nav-item {
+  margin-left: 1rem;
+}
+
+.navbar .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 991px) {
+  .navbar .nav-link {
+    padding: 0.25rem 1;
+    font-weight: 700;
+    background-color: transparent;
+    border-bottom: 0rem solid transparent;
+  }
+
+  .navbar .nav-item + .nav-item {
+    margin-left: 0%;
+  }
+
+  .navbar .active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}
