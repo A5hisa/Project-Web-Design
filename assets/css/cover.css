@@ -13,6 +13,22 @@
 body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+body:before {
+  content: "";
+  background-image: url(../images/cover_img.png);
+  background-position: 5px 25%;
+  background-repeat: no-repeat;
+  background-size: 2300px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
+  z-index: -1;
 }
 
 .cover-container {
@@ -51,4 +67,22 @@ body {
   to {
     border-right-color: transparent;
   }
+}
+
+p {
+  font-size: 18px;
+}
+
+.detail {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
+/* BUTTON */
+.button {
+  color: white;
+  display: inline;
+  outline: rgba(255,255,255,.6) solid 4px;
+  outline-offset: .2em;
+  border-radius: .2em;
 }
