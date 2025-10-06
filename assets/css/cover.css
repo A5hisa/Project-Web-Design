@@ -86,3 +86,20 @@ p {
   outline-offset: .2em;
   border-radius: .2em;
 }
+
+@media (max-width: 991px) {
+  .button {
+    color: white;
+    display: inline;
+    outline: rgba(255,255,255,.6) solid 4px;
+    outline-offset: .1em;
+    border-radius: .1em;
+  }
+  @keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
