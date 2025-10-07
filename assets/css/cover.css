@@ -92,8 +92,8 @@ p {
     color: white;
     display: inline;
     outline: rgba(255,255,255,.6) solid 4px;
-    outline-offset: .1em;
-    border-radius: .1em;
+    outline-offset: .2em;
+    border-radius: .2em;
   }
   @keyframes typewriter {
   from {
