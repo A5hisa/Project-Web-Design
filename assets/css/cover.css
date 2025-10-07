@@ -79,7 +79,7 @@ p {
 }
 
 /* BUTTON */
-.button {
+.btn {
   color: white;
   display: inline;
   outline: rgba(255,255,255,.6) solid 4px;
@@ -88,7 +88,7 @@ p {
 }
 
 @media (max-width: 991px) {
-  .button {
+  .btn {
     color: white;
     display: inline;
     outline: rgba(255,255,255,.6) solid 4px;
