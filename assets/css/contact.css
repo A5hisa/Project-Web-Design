@@ -48,15 +48,6 @@
 
 /* HERO SECTION */
 
-.hero .container .title {
-  font-size: 95px;
-}
-
-.hero .container .detail {
-  padding-top: 20px;
-  font-size: 22px;
-}
-
 .hero {
   position: relative;
   background: linear-gradient(
@@ -74,7 +65,7 @@
 .hero h1 {
   position: relative;
   z-index: 1;
-  font-size: 4.5rem;
+  font-size: 95px;
   margin: 0 0 10px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.9);
@@ -83,7 +74,8 @@
 .hero p {
   position: relative;
   z-index: 1;
-  font-size: 1.1rem;
+  padding-top: 20px;
+  font-size: 22px;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.4;
 }
@@ -158,5 +150,27 @@ h1 {
   h1 {
     text-shadow: var(--x-offset) var(--y-offset) 0px 0px var(--background-color),
       var(--x-offset) var(--y-offset) var(--stroke) 0px var(--stroke-color);
+  }
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (max-width: 991px) {
+  .hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 60px;
+    margin: 0 0 10px;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .hero p {
+    position: relative;
+    z-index: 1;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.4;
   }
 }
