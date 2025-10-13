@@ -35,13 +35,22 @@ body:before {
   max-width: 42em;
 }
 
+p {
+  font-size: 18px;
+}
+
+.detail {
+  margin-top: 5px;
+  margin-bottom: 40px;
+}
+
 /* Cursor */
 .cursor {
   position: relative;
   width: 24em;
   margin: 0 auto;
   border-right: 2px solid rgba(255, 255, 255, 0.75);
-  font-size: 35px;
+  font-size: 40px;
   text-align: center;
   white-space: nowrap;
   overflow: hidden;
@@ -58,7 +67,7 @@ body:before {
     width: 0;
   }
   to {
-    width: 48%;
+    width: 53%;
   }
 }
 @keyframes blinkingCursor {
@@ -68,15 +77,6 @@ body:before {
   to {
     border-right-color: transparent;
   }
-}
-
-p {
-  font-size: 18px;
-}
-
-.detail {
-  margin-top: 5px;
-  margin-bottom: 40px;
 }
 
 /* BUTTON */
