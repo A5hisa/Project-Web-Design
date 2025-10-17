@@ -11,17 +11,28 @@
     .
     ├── assets
     │   ├── css
+    │   │    ├── birdpage.css
     │   │    ├── contact.css
     │   │    ├── cover.css
     │   │    ├── homepage.css
     │   │    └── style.css            
     │   └── images
-    │        └── member_img
-    ├── my-website
+    │        ├── banner
+    │        ├── cover
+    │        ├── economic_birds
+    │        ├── extinct_birds
+    │        ├── foreign_birds
+    │        ├── member
+    │        └── thai_birds
+    ├── content
     │   ├── contact.html
-    │   └── homepage.html
-    ├── README.md           
-    └── index.html              
+    │   ├── economicbird.html
+    │   ├── extinctbird.html
+    │   ├── foreignbird.html
+    │   ├── homepage.html
+    │   └── thaibird.html
+    ├── index.html              
+    └── README.md              
 ```
 
 ## Authors

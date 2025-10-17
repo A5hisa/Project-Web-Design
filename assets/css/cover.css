@@ -18,7 +18,7 @@ body {
 
 body:before {
   content: "";
-  background-image: url(../images/cover_img.png);
+  background-image: url(../images/cover/cover_img.png);
   background-position: 5px 25%;
   background-repeat: no-repeat;
   background-size: 2300px;
