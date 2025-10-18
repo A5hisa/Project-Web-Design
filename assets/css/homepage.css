@@ -23,11 +23,11 @@
   height: 32rem;
 }
 
-/* FIRST CONTENT
+/* CONTENT
 -------------------------------------------------- */
 
 .content p {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 /* Center align the text within the three columns below the carousel */
@@ -50,7 +50,7 @@
 ------------------------- */
 
 .featurette .lead {
-  font-size: 18px;
+  font-size: 25px;
   padding-top: 30px;
 }
 .featurette-divider {
@@ -65,6 +65,9 @@
   letter-spacing: -0.05rem;
 }
 
+.subtitle {
+  font-size: 20px !important;
+}
 
 /* IMG */
 
@@ -189,3 +192,9 @@
     font-size: 3.5rem;
   }
 }
+
+/* BG EFECT */
+body {
+	background: #E5E6E4;
+}
+

@@ -37,6 +37,9 @@
 
 ## Authors
 
+- Chayanun Panich
+- Radchanon Chanchay
+- Witchaphat Phosri
 - Aussawin Saksawaddikul [(A5hisa)](https://www.github.com/A5hisa)
 
 ## Feedback

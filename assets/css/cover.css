@@ -9,6 +9,12 @@
 /*
  * Base structure
  */
+* {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 
 body {
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);

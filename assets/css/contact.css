@@ -21,6 +21,19 @@
   object-fit: cover;
 }
 
+.card-title {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.card-text {
+  font-size: 19px;
+}
+
+.card-subtitle {
+  font-size: 19px;
+}
+
 /* HOVER */
 .hover-underline::after,
 .hover-underline::before {
@@ -65,7 +78,7 @@
 .hero h1 {
   position: relative;
   z-index: 1;
-  font-size: 95px;
+  font-size: 110px;
   margin: 0 0 10px;
   line-height: 1;
   color: rgba(255, 255, 255, 0.9);
@@ -75,7 +88,7 @@
   position: relative;
   z-index: 1;
   padding-top: 20px;
-  font-size: 22px;
+  font-size: 25px;
   color: rgba(255, 255, 255, 0.5);
   line-height: 1.4;
 }

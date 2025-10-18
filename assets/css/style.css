@@ -2,6 +2,12 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
+* {
+  font-family: "Itim", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 body {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -12,7 +18,6 @@ body {
 -------------------------------------------------- */
 .navbar .nav-link {
   padding: 0.25rem 1;
-  font-weight: 700;
   background-color: transparent;
   border-bottom: 0.25rem solid transparent;
 }
