@@ -146,10 +146,13 @@ body {
 
 .photo3 {
   --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
-  mask: left var(--_i) top var(--_g), bottom var(--_i) left var(--_g),
-    top var(--_i) right var(--_g), right var(--_i) bottom var(--_g);
+  mask: 
+    left   var(--_i,) top    var(--_g),
+    bottom var(--_i,) left   var(--_g),
+    top    var(--_i,) right  var(--_g),
+    right  var(--_i,) bottom var(--_g);
   filter: grayscale();
-  transition: 0.3s linear;
+  transition: .3s linear;
   cursor: pointer;
 }
 
@@ -300,10 +303,13 @@ body {
 
   .photo3 {
     --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
-    mask: left var(--_i) top var(--_g), bottom var(--_i) left var(--_g),
-      top var(--_i) right var(--_g), right var(--_i) bottom var(--_g);
+    mask: 
+      left   var(--_i,) top    var(--_g),
+      bottom var(--_i,) left   var(--_g),
+      top    var(--_i,) right  var(--_g),
+      right  var(--_i,) bottom var(--_g);
     filter: grayscale();
-    transition: 0.3s linear;
+    transition: .3s linear;
     cursor: pointer;
   }
 
