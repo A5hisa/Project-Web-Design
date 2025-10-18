@@ -23,19 +23,24 @@
   height: 32rem;
 }
 
-/* MARKETING CONTENT
+/* FIRST CONTENT
 -------------------------------------------------- */
 
+.content p {
+  font-size: 18px;
+}
+
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+
+.content .col-lg-4 {
   margin-bottom: 1.5rem;
   text-align: center;
 }
-.marketing h2 {
+.content h2 {
   font-weight: 400;
 }
 /* rtl:begin:ignore */
-.marketing .col-lg-4 p {
+.content .col-lg-4 p {
   margin-right: 0.75rem;
   margin-left: 0.75rem;
 }
@@ -44,6 +49,10 @@
 /* Featurettes
 ------------------------- */
 
+.featurette .lead {
+  font-size: 18px;
+  padding-top: 30px;
+}
 .featurette-divider {
   margin: 5rem 0; /* Space out the Bootstrap <hr> more */
 }
@@ -56,12 +65,101 @@
   letter-spacing: -0.05rem;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+
+/* IMG */
+
+/* IMG1 */
+.gallery {
+  --g: 8px; /* the gap */
+  display: grid;
+  clip-path: inset(1px); /* to avoid visual glitchs */
+}
+
+.gallery > img {
+  --_p: calc(-1*var(--g));
+  grid-area: 1/1;
+  height: 500px;
+  width: 500px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: .4s .1s;
+  border-radius: 20%;
+}
+
+.gallery > img:first-child {
+  clip-path: polygon(0 0, calc(100% + var(--_p)) 0 , 0 calc(100% + var(--_p)))
+}
+
+.gallery > img:last-child {
+  clip-path: polygon(100% 100%, 100% calc(0% - var(--_p)), calc(0% - var(--_p)) 100%)
+}
+
+.gallery:hover > img:last-child,
+.gallery:hover > img:first-child:hover{
+  --_p: calc(50% - var(--g));
+}
+
+.gallery:hover > img:first-child,
+.gallery:hover > img:first-child:hover + img{
+  --_p: calc(-50% - var(--g));
+}
+
+/* IMG2 */
+.photo2 {
+  --s: 5px;  /* size of the frame */
+  --b: 1px;   /* border thickness */
+  --w: 500px; /* width of the image */
+  --c: #668284;
+  
+  width: var(--w);
+  aspect-ratio: 1;
+  object-fit: cover;
+  padding: calc(2*var(--s));
+  --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
+  background:
+    linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
+    linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
+  outline: calc(var(--w)/2) solid #0009;
+  outline-offset: calc(var(--w)/-2 - 2*var(--s));
+  transition: .4s;
+  cursor: pointer;
+}
+.photo2:hover {
+  outline: var(--b) solid var(--c);
+  outline-offset: calc(var(--s)/-2);
+  --_i: calc(100% - 2*var(--s));
+}
+
+
+/* IMG3 */
+.content3 img {
+  width: 500px;
+  height: 500px;
+}
+
+.photo3 {
+  --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
+  mask: 
+    left   var(--_i,) top    var(--_g),
+    bottom var(--_i,) left   var(--_g),
+    top    var(--_i,) right  var(--_g),
+    right  var(--_i,) bottom var(--_g);
+  filter: grayscale();
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.photo3:hover {
+  --_i: 10%;
+  filter: grayscale(0);
+}
+
+/* IMG4 */
+.content .suggest-bird img {
+  width: 150px;
+  height: 150px;
+  border-radius: 20%;
+  padding: 15px;
 }
 
 /* RESPONSIVE CSS
