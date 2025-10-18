@@ -228,12 +228,12 @@ body {
   }
 
   .gallery {
-    width: 480px;
+    width: 400px;
   }
 
   /* IMG1 */
   .gallery {
-    --g: 4px; /* the gap */
+    --g: 8px; /* the gap */
     display: grid;
     clip-path: inset(1px); /* to avoid visual glitchs */
   }
@@ -288,7 +288,9 @@ body {
     outline-offset: calc(var(--w) / -2 - 2 * var(--s));
     transition: 0.4s;
     cursor: pointer;
+    display: grid;
   }
+  
   .photo2:hover {
     outline: var(--b) solid var(--c);
     outline-offset: calc(var(--s) / -2);
@@ -311,10 +313,23 @@ body {
     filter: grayscale();
     transition: .3s linear;
     cursor: pointer;
+    display: grid;
   }
 
   .photo3:hover {
     --_i: 10%;
     filter: grayscale(0);
+  }
+
+  main {
+    margin-right: 0px;
+  }
+
+  .content {
+    justify-content: center;
+  }
+
+  .col-md-5 {
+    justify-items: center;
   }
 }
