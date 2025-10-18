@@ -57,3 +57,25 @@ body {
     border-bottom-color: #fff;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 490px;
+  }
+
+  .navbar .nav-link {
+    padding: 0.25rem 1;
+    font-weight: 700;
+    background-color: transparent;
+    border-bottom: 0rem solid transparent;
+  }
+
+  .navbar .nav-item + .nav-item {
+    margin-left: 0%;
+  }
+
+  .navbar .active {
+    color: #fff;
+    border-bottom-color: #fff;
+  }
+}

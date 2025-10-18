@@ -1,6 +1,8 @@
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-
+body {
+  background: #e5e6e4;
+}
 /* Carousel base class */
 .carousel {
   margin-bottom: 4rem;
@@ -79,60 +81,62 @@
 }
 
 .gallery > img {
-  --_p: calc(-1*var(--g));
+  --_p: calc(-1 * var(--g));
   grid-area: 1/1;
   height: 500px;
   width: 500px;
   aspect-ratio: 1;
   cursor: pointer;
-  transition: .4s .1s;
+  transition: 0.4s 0.1s;
   border-radius: 20%;
 }
 
 .gallery > img:first-child {
-  clip-path: polygon(0 0, calc(100% + var(--_p)) 0 , 0 calc(100% + var(--_p)))
+  clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
 }
 
 .gallery > img:last-child {
-  clip-path: polygon(100% 100%, 100% calc(0% - var(--_p)), calc(0% - var(--_p)) 100%)
+  clip-path: polygon(
+    100% 100%,
+    100% calc(0% - var(--_p)),
+    calc(0% - var(--_p)) 100%
+  );
 }
 
 .gallery:hover > img:last-child,
-.gallery:hover > img:first-child:hover{
+.gallery:hover > img:first-child:hover {
   --_p: calc(50% - var(--g));
 }
 
 .gallery:hover > img:first-child,
-.gallery:hover > img:first-child:hover + img{
+.gallery:hover > img:first-child:hover + img {
   --_p: calc(-50% - var(--g));
 }
 
 /* IMG2 */
 .photo2 {
-  --s: 5px;  /* size of the frame */
-  --b: 1px;   /* border thickness */
+  --s: 5px; /* size of the frame */
+  --b: 1px; /* border thickness */
   --w: 500px; /* width of the image */
   --c: #668284;
-  
+
   width: var(--w);
   aspect-ratio: 1;
   object-fit: cover;
-  padding: calc(2*var(--s));
-  --_g: var(--c) var(--b),#0000 0 calc(100% - var(--b)),var(--c) 0;
-  background:
-    linear-gradient(      var(--_g)) 50%/100% var(--_i,100%) no-repeat,
-    linear-gradient(90deg,var(--_g)) 50%/var(--_i,100%) 100% no-repeat;
-  outline: calc(var(--w)/2) solid #0009;
-  outline-offset: calc(var(--w)/-2 - 2*var(--s));
-  transition: .4s;
+  padding: calc(2 * var(--s));
+  --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
+  background: linear-gradient(var(--_g)) 50%/100% var(--_i, 100%) no-repeat,
+    linear-gradient(90deg, var(--_g)) 50% / var(--_i, 100%) 100% no-repeat;
+  outline: calc(var(--w) / 2) solid #0009;
+  outline-offset: calc(var(--w) / -2 - 2 * var(--s));
+  transition: 0.4s;
   cursor: pointer;
 }
 .photo2:hover {
   outline: var(--b) solid var(--c);
-  outline-offset: calc(var(--s)/-2);
-  --_i: calc(100% - 2*var(--s));
+  outline-offset: calc(var(--s) / -2);
+  --_i: calc(100% - 2 * var(--s));
 }
-
 
 /* IMG3 */
 .content3 img {
@@ -142,13 +146,10 @@
 
 .photo3 {
   --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
-  mask: 
-    left   var(--_i,) top    var(--_g),
-    bottom var(--_i,) left   var(--_g),
-    top    var(--_i,) right  var(--_g),
-    right  var(--_i,) bottom var(--_g);
+  mask: left var(--_i) top var(--_g), bottom var(--_i) left var(--_g),
+    top var(--_i) right var(--_g), right var(--_i) bottom var(--_g);
   filter: grayscale();
-  transition: .3s linear;
+  transition: 0.3s linear;
   cursor: pointer;
 }
 
@@ -193,8 +194,121 @@
   }
 }
 
-/* BG EFECT */
-body {
-	background: #E5E6E4;
+@media (max-width: 1400px) {
+  .content {
+    margin-right: 0%;
+    margin-left: 0%;
+  }
+
+  .content2 h2,
+  .content2 p {
+    margin-left: 60px;
+  }
+
+  .gallery {
+    width: 500px;
+  }
 }
 
+@media (max-width: 480px) {
+  .content {
+    max-width: 480px;
+  }
+
+  .content2 h2,
+  .content2 p {
+    margin: 0%;
+  }
+
+  .content .lead {
+    font-size: 18px;
+  }
+
+  .gallery {
+    width: 480px;
+  }
+
+  /* IMG1 */
+  .gallery {
+    --g: 4px; /* the gap */
+    display: grid;
+    clip-path: inset(1px); /* to avoid visual glitchs */
+  }
+
+  .gallery > img {
+    --_p: calc(-1 * var(--g));
+    grid-area: 1/1;
+    height: 400px;
+    width: 400px;
+    aspect-ratio: 1;
+    cursor: pointer;
+    transition: 0.4s 0.1s;
+    border-radius: 20%;
+  }
+
+  .gallery > img:first-child {
+    clip-path: polygon(0 0, calc(100% + var(--_p)) 0, 0 calc(100% + var(--_p)));
+  }
+
+  .gallery > img:last-child {
+    clip-path: polygon(
+      100% 100%,
+      100% calc(0% - var(--_p)),
+      calc(0% - var(--_p)) 100%
+    );
+  }
+
+  .gallery:hover > img:last-child,
+  .gallery:hover > img:first-child:hover {
+    --_p: calc(50% - var(--g));
+  }
+
+  .gallery:hover > img:first-child,
+  .gallery:hover > img:first-child:hover + img {
+    --_p: calc(-50% - var(--g));
+  }
+  /* IMG2 */
+  .photo2 {
+    --s: 5px; /* size of the frame */
+    --b: 1px; /* border thickness */
+    --w: 400px; /* width of the image */
+    --c: #668284;
+
+    width: var(--w);
+    aspect-ratio: 1;
+    object-fit: cover;
+    padding: calc(2 * var(--s));
+    --_g: var(--c) var(--b), #0000 0 calc(100% - var(--b)), var(--c) 0;
+    background: linear-gradient(var(--_g)) 50%/100% var(--_i, 100%) no-repeat,
+      linear-gradient(90deg, var(--_g)) 50% / var(--_i, 100%) 100% no-repeat;
+    outline: calc(var(--w) / 2) solid #0009;
+    outline-offset: calc(var(--w) / -2 - 2 * var(--s));
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .photo2:hover {
+    outline: var(--b) solid var(--c);
+    outline-offset: calc(var(--s) / -2);
+    --_i: calc(100% - 2 * var(--s));
+  }
+
+  /* IMG3 */
+  .content3 img {
+    width: 400px;
+    height: 400px;
+  }
+
+  .photo3 {
+    --_g: 10%/45% 45% no-repeat conic-gradient(#000 0 0);
+    mask: left var(--_i) top var(--_g), bottom var(--_i) left var(--_g),
+      top var(--_i) right var(--_g), right var(--_i) bottom var(--_g);
+    filter: grayscale();
+    transition: 0.3s linear;
+    cursor: pointer;
+  }
+
+  .photo3:hover {
+    --_i: 10%;
+    filter: grayscale(0);
+  }
+}
