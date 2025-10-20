@@ -59,9 +59,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .navbar {
-    width: 490px;
-  }
 
   .navbar .nav-link {
     padding: 0.25rem 1;
